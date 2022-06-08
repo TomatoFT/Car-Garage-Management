@@ -1,1 +1,1 @@
-web: gunicorn quanlygarageoto.wsgi --log-file -
+web: gunicorn gara_management.wsgi --log-file -

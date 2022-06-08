@@ -24,4 +24,4 @@ tqdm==4.47.0
 tzdata==2022.1
 virtualenv==20.14.1
 whitenoise==6.2.0
-psycopg2-binary==2.8.6
+psycopg2==2.8.6

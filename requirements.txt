@@ -14,7 +14,7 @@ kiwisolver==1.4.2
 matplotlib==3.2.2
 numpy==1.18.5
 opencv-python==4.5.5.64
-ortools==8.2.8710
+ortools==9.3.10497
 pandas==1.4.2
 Pillow==9.1.0
 platformdirs==2.5.2

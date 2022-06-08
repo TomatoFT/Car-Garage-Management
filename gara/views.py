@@ -62,7 +62,7 @@ def customer_login_view(request):
     if request.method== 'POST':
         username = request.POST['username']
         password = request.POST['password']
-        # request.session['rawpassword'] = password
+        request.session['rawpassword'] = password
         print(f'username {username} password {password}')
         print(form.is_valid())
         user = authenticate(request, username=username, password=password)
@@ -83,9 +83,9 @@ def profile(request, username):
         profile_pic = '../' + cus.profile_pic.url
         print(profile_pic)
     except:
-        # rawpassword = request.session.get('rawpassword')
+        rawpassword = request.session.get('rawpassword')
         password = request.user.password
-        cus = Staff.objects.create(username=username, password=password)
+        cus = Staff.objects.create(username=username, password=rawpassword)
         cus.is_admin = True
         profile_pic = "../static/profile_pic/CustomerProfilePic/images.jpg"
         cus.profile_pic = profile_pic

@@ -207,7 +207,7 @@ def nhapbiensosua(request,username):
         phieusua_x=PhieuSuaChua.objects.create(maxe_id=xe_x.maxe,tongthanhtien=0)
         phieusua_x.save()
         return redirect(f'../{username}/view_phieusua/{phieusua_x.maphieusuachua}')
-    return render(request,'phieusuachua/nhapbiensosua.html', {'enquiry':enquiry, 'customer': staff, 'picture':picture}, ) 
+    return render(request,'phieusuachua/nhapbiensosua.html', {'enquiry':enquiry, 'customer': staff, 'picture':picture}) 
 
 @login_required(login_url="/login")
 def view_phieusua(request ,maphieusuachua, username):
@@ -482,7 +482,7 @@ def regular_update(request, username):
     a = CapNhatQuyDinh()
     staff = Staff.objects.get(username=username)
     picture = '../' + staff.profile_pic.url
-    if QuyDinhHienHanh.objects.all().exists() ==False:
+    if QuyDinhHienHanh.objects.all().exists() == False:
         update_default()
     data = QuyDinhHienHanh.objects.all()
     return render(request, 'gara/cap_nhat_quy_dinh.html',{'fa':a, 'data':data, "customer": staff, "picture":picture})

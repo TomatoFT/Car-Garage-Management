@@ -13,7 +13,6 @@ pandas
 Pillow==9.1.0
 platformdirs==2.5.2
 protobuf==3.20.0
-psycopg2==2.9.3
 pygame==2.1.2
 pyparsing==3.0.8
 python-dateutil==2.8.2
@@ -25,3 +24,4 @@ tqdm==4.47.0
 tzdata==2022.1
 virtualenv==20.14.1
 whitenoise==6.2.0
+psycopg2-binary==2.8.6

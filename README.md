@@ -31,5 +31,6 @@ cd SE104
 pip install -r requirements.txt
 python manage.py runserver
 ```
-
-
+<h3>Account of demo</h3>
+Username: opera
+Password: 1
